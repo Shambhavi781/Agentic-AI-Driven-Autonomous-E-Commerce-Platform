@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Shopping Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛒 AI Shopping Assistant</h1>
+
+    <div class="search-box">
+       <input type="text" id="userInput" placeholder="Search for products...">
+       <button onclick="sendMessage()">Search</button>
+
+       <!--  CATEGORY SELECT -->
+       <select id="categorySelect">
+        <option value="">Select Category</option>
+        <option value="earbuds">Earbuds</option>
+        <option value="phones">Phones</option>
+        <option value="laptops">Laptops</option>
+        <option value="shoes">Shoes</option>
+        <option value="dress">Dress</option>
+        <option value="watch">Watch</option>
+        <option value="charger">Charger</option>
+        <option value="all">All Categories</option>
+        </select>
+
+       <!-- ⚙️ BUTTON -->
+       <button onclick="updateSelectedCategory()">⚙️</button>
+    </div>
+    <h3 id="cartTotal">Total: ₹0</h3>
+    <button onclick="viewCart()">🛒 View Cart</button>
+    <!--  ADD PRODUCT FEATURE -->
+    <div style="margin:20px; padding:15px; background:#e7f3ff; border-radius:10px;">
+        <h3>Add Product</h3>
+
+        <input type="text" id="pName" placeholder="Product Name">
+        <input type="number" id="pPrice" placeholder="Price">
+        <input type="text" id="pImage" placeholder="Image URL (optional)">
+
+        <button onclick="addProduct()">Add</button>
+    </div>
+
+    <!-- Products -->
+    <div id="response" class="products"></div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
